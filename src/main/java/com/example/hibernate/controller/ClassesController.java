@@ -28,7 +28,8 @@ public class ClassesController {
         return classesService.createClass(clazz);
     }
 
-    public void deleteClass(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public void deleteClass(@PathVariable Long id) {
         classesService.deleteClass(id);
     }
 }
